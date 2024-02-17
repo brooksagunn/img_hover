@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+}
+
+.block {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  /* border: 1px solid black; */
+  background-image: url(/images/sea_crush.jpg);
+  background-position: center;
+  background-size: contain;
+}
+
+.block:hover {
+  cursor: pointer;
+}
+
+.block-1::after {
+  content: "On the bleeding edge of discovery";
+  color: #8b0000;
+  font-weight: bold;
+  font-size: 20px;
+  position: absolute;
+  background: rgba(0, 255, 100, 0.2);
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+
+.block-1:hover::after {
+  opacity: 1;
+}
